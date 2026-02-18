@@ -14,5 +14,7 @@ def apply_discount(price, discount):
         discount=(discount/100)*price
         total_cost=price-discount
     print( 'total cost:', total_cost)
-apply_discount(100,20)
+price=float(input("enter price of object    :"))
+discount=float(input("enter discount%       :"))
+apply_discount(price,discount)
 
