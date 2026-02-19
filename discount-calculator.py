@@ -17,4 +17,4 @@ def apply_discount(price, discount):
 price=float(input("enter price of object    :"))
 discount=float(input("enter discount%       :"))
 apply_discount(price,discount)
-
+x=input('press enter to exit from program....')
