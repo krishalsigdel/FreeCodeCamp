@@ -18,11 +18,11 @@ user_need=input('do you wanna encrypt(E) or decrypt(D)')
 user_need=user_need.upper()
 if user_need=="E":
     text=input('Enter the text that needs to be encrypted :     ')
-    shift=int(input('write the shift that needs to be done(this should not be changed while doing vice versa)'))
+    shift=int(input('write the shift that needs to be done(this should be same while decrepting)')
     print (caesar(user_need, text ,shift))
 elif user_need=='D':
     text=input('Enter the text that needs to be decrepted:     ')
-    shift=int(input('write the shift that needs to be done(this should not be changed while doing vice versa)'))
+    shift=int(input('write the shift that needs to be done(this should be same as encrypting)'))
     print (caesar(user_need, text ,shift))
 else:
     print('you need to enter either "E" or "D"')
