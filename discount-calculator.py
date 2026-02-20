@@ -14,7 +14,11 @@ def apply_discount(price, discount):
         discount=(discount/100)*price
         total_cost=price-discount
     print( 'total cost:', total_cost)
-price=float(input("enter price of object    :"))
-discount=float(input("enter discount%       :"))
-apply_discount(price,discount)
+cont='y'
+while cont.lower()=='y':
+    price=float(input("enter price of object    :"))
+    discount=float(input("enter discount%       :"))
+    apply_discount(price,discount)
+    cont=input('do you want to do it again(y/n)')
+print('Thank You!')
 x=input('press enter to exit from program....')

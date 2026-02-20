@@ -14,16 +14,21 @@ def caesar(user_need,text, shift):
         encrypted_text = text.translate(translation_table)
         return encrypted_text
 
-user_need=input('do you wanna encrypt(E) or decrypt(D)')
-user_need=user_need.upper()
-if user_need=="E":
-    text=input('Enter the text that needs to be encrypted :     ')
-    shift=int(input('write the shift that needs to be done(this should not be changed while doing vice versa)'))
-    print (caesar(user_need, text ,shift))
-elif user_need=='D':
-    text=input('Enter the text that needs to be decrepted:     ')
-    shift=int(input('write the shift that needs to be done(this should not be changed while doing vice versa)'))
-    print (caesar(user_need, text ,shift))
-else:
-    print('you need to enter either "E" or "D"')
+cont='y'
+while cont.lower()=='y':
+    user_need=input('do you wanna encrypt(E) or decrypt(D)')
+    user_need=user_need.upper()
+    if user_need=="E":
+        text=input('Enter the text that needs to be encrypted :     ')
+        shift=int(input('write the shift that needs to be done(this should not be changed while doing vice versa)'))
+        print ('encrypted text:     '+ caesar(user_need, text ,shift))
+    elif user_need=='D':
+        text=input('Enter the text that needs to be decrepted:     ')
+        shift=int(input('write the shift that needs to be done(this should not be changed while doing vice versa)'))
+        print ('decrepted text:     '+ caesar(user_need, text ,shift))
+    else:
+        print('you need to enter either "E" or "D"')
+    
+    cont=input('do you want to do it again(y/n)')
+print('Thank You!')
 x=input('press enter to exit from program....')

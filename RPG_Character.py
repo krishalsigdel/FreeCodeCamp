@@ -29,15 +29,18 @@ def create_character(name,strength,intelligence,charisma):
         f"INT {full_dot * intelligence}{empty_dot * (10 - intelligence)}\n"
         f"CHA {full_dot * charisma}{empty_dot * (10 - charisma)}"
     )
-
-ch_name=input('Enter character name     :')
-ch_strength=input('Enter character strength :')
-ch_intelligence= input('Enter character intelligence :')
-ch_charisma=input('Enter character charisma     :')
-# Call the function to clear the screen
-clear_screen()   
-ch_charisma=int (ch_charisma)
-ch_intelligence=int(ch_intelligence)
-ch_strength=int(ch_strength)
-print(create_character(ch_name,ch_strength,ch_intelligence,ch_charisma))
+cont='y'
+while cont.lower()=='y':
+    ch_name=input('Enter character name     :')
+    ch_strength=input('Enter character strength :')
+    ch_intelligence= input('Enter character intelligence :')
+    ch_charisma=input('Enter character charisma     :')
+    # Call the function to clear the screen
+    clear_screen()   
+    ch_charisma=int (ch_charisma)
+    ch_intelligence=int(ch_intelligence)
+    ch_strength=int(ch_strength)
+    print(create_character(ch_name,ch_strength,ch_intelligence,ch_charisma))
+    cont=input('do you want to do it again(y/n)')
+print('Thank You!')
 x=input('press enter to exit from program....')
