@@ -17,13 +17,13 @@ for st_name in st_names:
     print (f'enter marks of "{st_name}"')
 #to get marks in each subject
     for i in range (1,1+no_sub):
-        mks_correct='y'
-        while mks_correct=='y':
+        mks_correct='y' 
+        while mks_correct=='y':#to input mks again if user input marks is not in between 0-100
             inp_mks=int(input(f'Enter marks of subject {i} (#out of 100 )      :'))
-            if inp_mks>100 or inp_mks<0:
+            if inp_mks>100 or inp_mks<0:        #check if mks is betwn 0-100(upto line 27)
                 print('marks must be in between 0 and 100')   
             else:
-                mks_correct="n"
+                mks_correct="n"#exit while loop,hence increase the value of i
                 marks.append(inp_mks)
 #to check if student passes in every subject
     for mark in marks:
