@@ -2,8 +2,8 @@ def caesar(user_need,text, shift):
     maxi=len(text)
     if not isinstance(shift, int):
         return 'Shift must be an integer value.'
-    elif not(shift > 1 or shift < maxi):
-        return 'Shift must be an integer between 1 and '+ str(maxi)
+    elif shift < 0 or shift >= 25:
+        return 'Shift must be between 0 and 25.'
     else:
         if user_need=="D":
             shift=-shift
