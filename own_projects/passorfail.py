@@ -16,18 +16,19 @@ for st_name in st_names:
     marks=[]
     print (f'enter marks of "{st_name}"')
 #to get marks in each subject
+    total_mks=input(f'Enter total marks of each subject (this should be same for all subjects)        :')
     for i in range (1,1+no_sub):
         mks_correct='y' 
         while mks_correct=='y':#to input mks again if user input marks is not in between 0-100
-            inp_mks=int(input(f'Enter marks of subject {i} (#out of 100 )      :'))
-            if inp_mks>100 or inp_mks<0:        #check if mks is betwn 0-100(upto line 27)
-                print('marks must be in between 0 and 100')   
+            inp_mks=int(input(f'Enter marks of subject {i} (#out of {total_mks} )      :'))
+            if inp_mks>int(total_mks) or inp_mks<0:        #check if mks is betwn 0-total marks(upto line 27)
+                print(f'marks must be in between 0 and {total_mks}')   
             else:
                 mks_correct="n"#exit while loop,hence increase the value of i
                 marks.append(inp_mks)
 #to check if student passes in every subject
     for mark in marks:
-        if mark >= 40:
+        if mark >= 40/100*int(total_mks): #check if marks is greater than or equal to 40% of total marks
             flag+=1
 #check if student passed ot fail and store in corresponding list
     if flag==no_sub:
